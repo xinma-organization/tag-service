@@ -2,6 +2,7 @@ package com.xinma.tag.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,6 +11,7 @@ import com.xinma.tag.service.impl.aliyun.TagTableServiceImpl;
 
 @Configuration
 @ConditionalOnClass(TagTableService.class)
+@EnableConfigurationProperties(TagTableOtsProperties.class)
 public class TagTableAutoConfiguration {
 
 	@Autowired
